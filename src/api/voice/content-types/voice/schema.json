@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "voices",
+  "info": {
+    "singularName": "voice",
+    "pluralName": "voices",
+    "displayName": "Voice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "publishedDate": {
+      "type": "date"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
